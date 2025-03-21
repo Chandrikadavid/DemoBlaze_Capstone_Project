@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd"> -->
+<suite name="DemoBlaze Test Suite">
+
+	<parameter name="browser" value="chrome" />
+
+	<!-- Run Cucumber Signup Test First -->
+	<test name="Signup Test">
+		<classes>
+			<class name="MyRunner.signUpRunner" />
+		</classes>
+	</test>
+
+	<!-- Run Login Test after Signup completes -->
+	<test name="Login Test">
+		<classes>
+			<class name="TestCases.LoginTest" />
+		</classes>
+	</test>
+
+	<!-- Run Contact Form Test after Login completes -->
+	<test name="Contact Form Test">
+		<parameter name="contactEmail" value="testuser@example.com" />
+		<parameter name="contactName" value="Test User" />
+		<parameter name="contactMessage"
+			value="This is a test message for contact form." />
+		<classes>
+			<class name="TestCases.ContactTest" />
+		</classes>
+	</test>
+
+	<!-- Run About Us Test after Contact Form completes -->
+	<test name="About Us Test">
+		<classes>
+			<class name="TestCases.AboutUsTest"></class>
+		</classes>
+	</test>
+
+	<!-- Run Category Test after About Us completes -->
+	<test name="Category Test">
+		<classes>
+			<class name="TestCases.CategoryTest" />
+		</classes>
+	</test>
+
+	<!-- Run Cart Test after Cateogry Test -->
+	<test name="Cart Test">
+		<classes>
+			<class name="TestCases.CartTest" />
+		</classes>
+	</test>
+</suite>
