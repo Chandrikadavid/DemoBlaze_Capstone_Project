@@ -65,7 +65,7 @@ public class LoginTest extends BaseClass {
 		ExtentReportManager.logInfo("Starting Invalid Login Test");
 
 		// Load invalid credentials from Excel
-		String excelPath = "C:\\Users\\Windows\\Desktop\\AutomationData.xlsx";
+		String excelPath = ".\\src\\main\\java\\base\\AutomationData.xlsx";
 		String sheetName = "DemoBlaze";
 		ExcelUtils.loadExcel(excelPath, sheetName);
 		List<String[]> credentials = ExcelUtils.getAllRowsData();
