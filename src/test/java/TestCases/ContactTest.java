@@ -19,7 +19,7 @@ public class ContactTest extends BaseClass {
 	@BeforeMethod
 	public void setUp(String browser) throws IOException {
 		invokeBrowser(browser); // Pass the parameter to BaseClass method
-		contactPage = new ContactPage(driver);
+		contactPage = new ContactPage(getDriver());
 		ExtentReportManager.startTest("Contact Form Test"); // Start Extent Report Test
 	}
 
@@ -33,7 +33,7 @@ public class ContactTest extends BaseClass {
 		contactPage.submitContactForm();
 
 		// Switch to the alert box and get text
-		Alert alert = driver.switchTo().alert();
+		Alert alert = getDriver().switchTo().alert();
 		String alertMessage = alert.getText();
 		System.out.println("Alert Message: " + alertMessage);
 		alert.accept();

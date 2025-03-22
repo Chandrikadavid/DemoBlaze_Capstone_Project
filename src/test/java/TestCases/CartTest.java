@@ -1,46 +1,43 @@
 package TestCases;
 
 import java.io.IOException;
-
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import base.BaseClass;
 import pages.CartPage;
 import utilities.ExtentReportManager;
 
 public class CartTest extends BaseClass {
-	private CartPage cartPage;
+    private CartPage cartPage;
 
-	@Test(priority = 1)
-	@Parameters("browser") // Get browser from TestNG XML
-	public void testOpenCart(String browser) throws IOException {
-		ExtentReportManager.startTest("Cart Test"); // Start Extent Report Test
-		invokeBrowser(browser);
-		cartPage = new CartPage(driver, prop);
-		cartPage.openCart();
-		ExtentReportManager.logInfo("Opened Cart page");
-		ExtentReportManager.endTest();
-	}
+    @Parameters("browser")
+    @BeforeClass
+    public void setUp(String browser) throws IOException {
+        invokeBrowser(browser); // Start browser only once
+        cartPage = new CartPage(getDriver(), prop);
+    }
 
-	@Test(priority = 2, dependsOnMethods = "testOpenCart")
-	public void testPlaceOrder() {
-		ExtentReportManager.startTest("Place Order Test");
-		cartPage.openCart();
-		ExtentReportManager.logInfo("Opened Cart page");
-		cartPage.clickPlaceOrder();
-		ExtentReportManager.logInfo("Clicked on Place Order button");
-		cartPage.placeOrder();
-		ExtentReportManager.logInfo("Order placed successfully with test data");
-		Assert.assertTrue(cartPage.verifyOrderPlaced(), "Order placement failed!");
-		ExtentReportManager.endTest();
-	}
+    @Test(priority = 1)
+    public void testOpenCart() throws IOException {
+        ExtentReportManager.startTest("Cart Test");
+        cartPage.openCart();
+        ExtentReportManager.logInfo("Opened Cart page");
+    }
 
-	@AfterClass
-	public void tearDown() {
-		// Additional cleanup if necessary
-		ExtentReportManager.endTest(); // Ensure the last test is ended
-	}
+    @Test(priority = 2, dependsOnMethods = "testOpenCart")
+    public void testPlaceOrder() throws IOException {
+        ExtentReportManager.startTest("Place Order Test");
+        cartPage.clickPlaceOrder();
+        cartPage.placeOrder();
+        Assert.assertTrue(cartPage.verifyOrderPlaced(), "Order placement failed!");
+    }
+
+    @AfterClass
+    public void tearDown() {
+        if (getDriver() != null) {
+            getDriver().quit(); // Close the browser session at the end
+        }
+        ExtentReportManager.endTest();
+    }
 }

@@ -1,52 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd"> -->
-<suite name="DemoBlaze Test Suite">
 
-	<parameter name="browser" value="chrome" />
+<suite name="DemoBlaze Parallel Test Suite" parallel="tests"
+	thread-count="2">
 
-	<!-- Run Cucumber Signup Test First -->
-	<test name="Signup Test">
+	<!-- Run Tests on Chrome -->
+	<!-- In TestNG way -->
+	<test name="Signup Test on Chrome">
+		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="MyRunner.signUpRunner" />
 		</classes>
 	</test>
 
-	<!-- Run Login Test after Signup completes -->
-	<test name="Login Test">
+	<!-- In Junit way -->
+	<test name="Signup Test by Junit">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="MyRunner.signUpJunit" />
+		</classes>
+	</test>
+	
+	<test name="Login Test on Chrome">
+		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="TestCases.LoginTest" />
 		</classes>
 	</test>
 
-	<!-- Run Contact Form Test after Login completes -->
-	<test name="Contact Form Test">
+	<test name="Contact Form Test on Chrome">
+		<parameter name="browser" value="chrome" />
 		<parameter name="contactEmail" value="testuser@example.com" />
 		<parameter name="contactName" value="Test User" />
 		<parameter name="contactMessage"
-			value="This is a test message for contact form." />
+			value="This is a test message for the contact form." />
 		<classes>
 			<class name="TestCases.ContactTest" />
 		</classes>
 	</test>
 
-	<!-- Run About Us Test after Contact Form completes -->
-	<test name="About Us Test">
+	<test name="About Us Test on Chrome">
+		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="TestCases.AboutUsTest"></class>
+			<class name="TestCases.AboutUsTest" />
 		</classes>
 	</test>
 
-	<!-- Run Category Test after About Us completes -->
-	<test name="Category Test">
+	<test name="Category Test on Chrome">
+		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="TestCases.CategoryTest" />
 		</classes>
 	</test>
 
-	<!-- Run Cart Test after Cateogry Test -->
-	<test name="Cart Test">
+	<test name="Cart Test on Chrome">
+		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="TestCases.CartTest" />
 		</classes>
 	</test>
+
+	<!-- Run Tests on Firefox -->
+	<test name="Signup Test on Firefox">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="MyRunner.signUpRunner" />
+		</classes>
+	</test>
+
+	<test name="Login Test on Firefox">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="TestCases.LoginTest" />
+		</classes>
+	</test>
+
+	<test name="Contact Form Test on Firefox">
+		<parameter name="browser" value="firefox" />
+		<parameter name="contactEmail" value="testuser@example.com" />
+		<parameter name="contactName" value="Test User" />
+		<parameter name="contactMessage"
+			value="This is a test message for the contact form." />
+		<classes>
+			<class name="TestCases.ContactTest" />
+		</classes>
+	</test>
+
+	<test name="About Us Test on Firefox">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="TestCases.AboutUsTest" />
+		</classes>
+	</test>
+
+	<test name="Category Test on Firefox">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="TestCases.CategoryTest" />
+		</classes>
+	</test>
+
+	<test name="Cart Test on Firefox">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="TestCases.CartTest" />
+		</classes>
+	</test>
+
 </suite>

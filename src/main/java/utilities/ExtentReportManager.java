@@ -1,11 +1,8 @@
 package utilities;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.model.Media;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 public class ExtentReportManager {
@@ -16,8 +13,7 @@ public class ExtentReportManager {
     // Initialize Extent Reports
     public static void initializeReport() {
         if (extent == null) {
-            String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-            String reportPath = "reports/ExtentReport_" + timestamp + ".html";
+            String reportPath = "reports/ExtentReport_" + ".html";
             ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
             extent = new ExtentReports();
             extent.attachReporter(sparkReporter);

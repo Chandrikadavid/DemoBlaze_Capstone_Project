@@ -16,7 +16,7 @@ public class SignupSteps extends BaseClass {
 	@Given("the user is on homepage")
 	public void the_user_is_on_homepage() throws IOException {
 		ExtentReportManager.startTest("Signup Test");
-		driver = BaseClass.driver;
+		driver = BaseClass.getDriver();
 		signupPage = new SignUpPage(driver); // Initialize the page object
 		ExtentReportManager.logInfo("User is on the homepage");
 	}

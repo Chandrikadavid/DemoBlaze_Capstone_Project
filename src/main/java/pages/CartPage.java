@@ -67,8 +67,8 @@ public class CartPage {
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(successMessage)).isDisplayed();
 	}
 
-	// **Check if Cart is Empty**
-	public boolean isCartEmpty() {
-		return driver.findElements(cartItems).isEmpty();
-	}
+//	// **Check if Cart is Empty**
+//	public boolean isCartEmpty() {
+//		return driver.findElements(cartItems).isEmpty();
+//	}
 }

@@ -2,18 +2,16 @@ package pages;
 
 import java.io.IOException;
 import java.time.Duration;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.FluentWait;
 
 public class LoginPage {
 	WebDriver driver;
-	WebDriverWait wait;
+	FluentWait<WebDriver> fluentWait;
 
-	// @FindBy Annotation to find the elements
+	// Locating Web Elements using @FindBy annotation
 	@FindBy(id = "login2")
 	WebElement loginButton;
 
@@ -26,27 +24,40 @@ public class LoginPage {
 	@FindBy(xpath = "//button[text()='Log in']")
 	WebElement submitButton;
 
-	@FindBy(xpath = "//a[contains(text(),'Welcome')]") // Updated XPath
+	@FindBy(xpath = "//a[contains(text(),'Welcome')]") // XPath to verify successful login
 	WebElement welcomeMessage;
 
-	// Constructor with page factory
+	// Constructor initializes elements using PageFactory and sets up Fluent Wait
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // Wait for elements
+
+		// Initializing Fluent Wait
+		fluentWait = new FluentWait<>(driver)
+				.withTimeout(Duration.ofSeconds(10)) // Maximum wait time of 10 seconds
+				.pollingEvery(Duration.ofMillis(500)) // Checks for the element every 500 milliseconds
+				.ignoring(NoSuchElementException.class); // Ignores NoSuchElementException
 	}
 
+
 	public void login(String username, String password) throws InterruptedException, IOException {
-		wait.until(ExpectedConditions.elementToBeClickable(loginButton)).click();
-		Thread.sleep(2000); // Wait for login modal to appear
-		wait.until(ExpectedConditions.visibilityOf(usernameField)).sendKeys(username);
+		// Fluent wait for the login button to be clickable and then click it
+		fluentWait.until(driver -> loginButton).click();
+
+		// Fluent wait for the username field to be visible, then send username
+		fluentWait.until(driver -> usernameField).sendKeys(username);
+
+		// Enter password directly as it's already located
 		passwordField.sendKeys(password);
+
+		// Click on the login submit button
 		submitButton.click();
 	}
 
 	public boolean isUserLoggedIn() {
 		try {
-			return wait.until(ExpectedConditions.visibilityOf(welcomeMessage)).isDisplayed();
+			// Fluent wait to check if welcome message appears after login
+			return fluentWait.until(driver -> welcomeMessage.isDisplayed());
 		} catch (Exception e) {
 			return false;
 		}

@@ -2,6 +2,8 @@ package TestCases;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.List;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -10,9 +12,11 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import utilities.ExtentReportManager;
+
 import base.BaseClass;
 import pages.LoginPage;
+import utilities.ExcelUtils;
+import utilities.ExtentReportManager;
 
 public class LoginTest extends BaseClass {
 	LoginPage loginPage;
@@ -21,7 +25,7 @@ public class LoginTest extends BaseClass {
 	@BeforeMethod
 	public void setUp(String browser) throws IOException {
 		invokeBrowser(browser);
-		loginPage = new LoginPage(driver);
+		loginPage = new LoginPage(getDriver());
 		ExtentReportManager.startTest("Login Test");
 	}
 
@@ -34,15 +38,15 @@ public class LoginTest extends BaseClass {
 		// Capture screenshot after login attempt
 		screenshot("Valid Login");
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
 			wait.until(ExpectedConditions.alertIsPresent());
 
-			Alert alert = driver.switchTo().alert();
+			Alert alert = getDriver().switchTo().alert();
 			String alertMessage = alert.getText();
 			System.out.println("Alert Message: " + alertMessage);
 
 			alert.accept();
-			ExtentReportManager.logPass("Expected alert "+alertMessage);
+			ExtentReportManager.logPass("Expected alert " + alertMessage);
 		} catch (TimeoutException e) {
 			ExtentReportManager.logFail("Expected alert not found for invalid login.");
 		}
@@ -59,23 +63,39 @@ public class LoginTest extends BaseClass {
 	@Test(priority = 2)
 	public void testInvalidLogin() throws InterruptedException, IOException {
 		ExtentReportManager.logInfo("Starting Invalid Login Test");
-		loginPage.login(prop.getProperty("invalidUsername"), prop.getProperty("invalidPassword"));
 
-		screenshot("Invalid Login");
+		// Load invalid credentials from Excel
+		String excelPath = "C:\\Users\\Windows\\Desktop\\AutomationData.xlsx";
+		String sheetName = "DemoBlaze";
+		ExcelUtils.loadExcel(excelPath, sheetName);
+		List<String[]> credentials = ExcelUtils.getAllRowsData();
 
-		try {
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-			wait.until(ExpectedConditions.alertIsPresent());
+		for (String[] cred : credentials) {
+			String username = cred[0];
+			String password = cred[1];
 
-			Alert alert = driver.switchTo().alert();
-			String alertMessage = alert.getText();
-			System.out.println("Alert Message: " + alertMessage);
+			ExtentReportManager.logInfo("Testing invalid login with username: " + username);
 
-			alert.accept();
-			ExtentReportManager.logPass("Expected alert "+alertMessage);
-		} catch (TimeoutException e) {
-			ExtentReportManager.logFail("Expected alert not found for invalid login.");
+			loginPage.login(username, password);
+			screenshot("Invalid_Login_" + username);
+
+			try {
+				WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+				wait.until(ExpectedConditions.alertIsPresent());
+
+				Alert alert = getDriver().switchTo().alert();
+				String alertMessage = alert.getText();
+				System.out.println("Alert Message: " + alertMessage);
+
+				alert.accept();
+				ExtentReportManager.logPass("Expected alert appeared: " + alertMessage);
+			} catch (TimeoutException e) {
+				ExtentReportManager.logFail("Expected alert not found for invalid login: " + username);
+			}
 		}
+
+		// Close Excel file after execution
+		ExcelUtils.closeExcel();
 	}
 
 	@AfterMethod

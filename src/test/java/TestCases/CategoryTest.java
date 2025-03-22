@@ -16,7 +16,7 @@ public class CategoryTest extends BaseClass {
 	@BeforeMethod
 	public void setUp(String browser) throws IOException {
 		invokeBrowser(browser); // Invoke browser from BaseClass
-		categoryPage = new CategoryPage(driver);
+		categoryPage = new CategoryPage(getDriver());
 	}
 
 	@Test(priority = 1)
