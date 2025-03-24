@@ -3,6 +3,9 @@
 
 <suite name="DemoBlaze Parallel Test Suite" parallel="tests"
 	thread-count="2">
+	<listeners>
+		<listener class-name="io.qameta.allure.testng.AllureTestNg" />
+	</listeners>
 
 	<!-- Run Tests on Chrome -->
 	<!-- In TestNG way -->
@@ -20,7 +23,7 @@
 			<class name="MyRunner.signUpJunit" />
 		</classes>
 	</test>
-	
+
 	<test name="Login Test on Chrome">
 		<parameter name="browser" value="chrome" />
 		<classes>
