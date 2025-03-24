@@ -3,6 +3,7 @@ package pages;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,6 +12,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import utilities.ExtentReportManager;
 
 public class CategoryPage {
@@ -40,12 +42,13 @@ public class CategoryPage {
     }
 
     // ** Method to select category and add first product **
-    public void selectCategoryAndAddFirstProduct(String category) throws IOException {
+    public void selectCategoryAndAddFirstProduct(String category) throws IOException, InterruptedException {
         ExtentReportManager.logInfo("Selecting category: " + category);
 
         for (int attempt = 0; attempt < 2; attempt++) {
             try {
-                // Click on the category
+              
+            	// Click on the category
                 WebElement categoryElement = getCategoryElement(category);
                 wait.until(ExpectedConditions.elementToBeClickable(categoryElement)).click();
 
@@ -69,6 +72,7 @@ public class CategoryPage {
                 // Handle alert
                 waitForAlertAndAccept();
                 ExtentReportManager.logPass("Product added to cart from " + category);
+                
                 homeLink.click();
                 return; // Exit method after success
             } catch (org.openqa.selenium.StaleElementReferenceException e) {
@@ -80,7 +84,7 @@ public class CategoryPage {
     }
 
     // ** Method to return category element dynamically **
-    private WebElement getCategoryElement(String category) {
+    public WebElement getCategoryElement(String category) {
         switch (category.toLowerCase()) {
             case "laptops":
                 return laptopsCategory;

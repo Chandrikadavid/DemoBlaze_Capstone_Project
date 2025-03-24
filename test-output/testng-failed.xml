@@ -1,30 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="2" parallel="tests" name="Failed suite [DemoBlaze Parallel Test Suite]">
-  <test thread-count="2" parallel="tests" name="Login Test on Chrome(failed)">
+  <listeners>
+    <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+  </listeners>
+  <test thread-count="2" parallel="tests" name="Cart Test on Chrome(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="TestCases.LoginTest">
+      <class name="TestCases.CartTest">
         <methods>
-          <include name="testInvalidLogin"/>
+          <include name="testOpenCart"/>
           <include name="setUp"/>
-          <include name="tearDownTest"/>
+          <include name="tearDown"/>
+          <include name="testPlaceOrder"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- TestCases.LoginTest -->
+      </class> <!-- TestCases.CartTest -->
     </classes>
-  </test> <!-- Login Test on Chrome(failed) -->
-  <test thread-count="2" parallel="tests" name="Login Test on Firefox(failed)">
+  </test> <!-- Cart Test on Chrome(failed) -->
+  <test thread-count="2" parallel="tests" name="Category Test on Chrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="TestCases.CategoryTest">
+        <methods>
+          <include name="testAddingProductsFromDifferentCategories"/>
+          <include name="tearDown"/>
+          <include name="closeBrowser"/>
+          <include name="deleteProductFromCart"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- TestCases.CategoryTest -->
+    </classes>
+  </test> <!-- Category Test on Chrome(failed) -->
+  <test thread-count="2" parallel="tests" name="Category Test on Firefox(failed)">
     <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="TestCases.LoginTest">
+      <class name="TestCases.CategoryTest">
         <methods>
-          <include name="testInvalidLogin"/>
-          <include name="setUp"/>
-          <include name="tearDownTest"/>
+          <include name="testAddingProductsFromDifferentCategories"/>
+          <include name="tearDown"/>
           <include name="closeBrowser"/>
+          <include name="deleteProductFromCart"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- TestCases.LoginTest -->
+      </class> <!-- TestCases.CategoryTest -->
     </classes>
-  </test> <!-- Login Test on Firefox(failed) -->
+  </test> <!-- Category Test on Firefox(failed) -->
 </suite> <!-- Failed suite [DemoBlaze Parallel Test Suite] -->

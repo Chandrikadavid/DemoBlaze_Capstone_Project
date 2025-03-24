@@ -1,8 +1,11 @@
 package pages;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.Properties;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -14,7 +17,7 @@ public class CartPage {
 	private WebDriverWait wait;
 
 	// **Locators using Page Object Model**
-	
+
 	private By cartButton = By.xpath("//a[@class='nav-link' and contains(text(),'Cart')]");
 	private By placeOrder = By.xpath("//button[contains(text(),'Place Order')]");
 	private By nameField = By.id("name");
@@ -26,26 +29,26 @@ public class CartPage {
 	private By purchaseButton = By.xpath("//button[contains(text(),'Purchase')]");
 	private By successMessage = By.xpath("//h2[contains(text(),'Thank you for your purchase!')]");
 	private By cartItems = By.xpath("//tbody/tr"); // Cart item rows
+	private By deleteButtons = By.xpath("//tbody/tr/td[4]/a"); // Delete button for each cart item
 
 	public CartPage(WebDriver driver, Properties prop) {
 		this.driver = driver; // Assigns the WebDriver instance to the class variable 'driver'
 		this.prop = prop; // Assigns the properties object to the class variable 'prop'
-		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // Initializes a WebDriverWait with a 10-second timeout for waiting on condition
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // Initializes a WebDriverWait with a 10-second
+																		// timeout for waiting on condition
 	}
 
 	// **Open Cart Page**
 	public void openCart() {
-		WebElement cartBtn = wait.until(ExpectedConditions.elementToBeClickable(cartButton)); // Wait for the cart button to be clickable
+		WebElement cartBtn = wait.until(ExpectedConditions.elementToBeClickable(cartButton));
 		cartBtn.click();
 
-		// Wait for cart page to fully load
-		wait.until(ExpectedConditions.visibilityOfElementLocated(placeOrder)); //Wait until the "Place Order" element is visible
 	}
 
 	// **Click 'Place Order'**
 	public void clickPlaceOrder() {
-		WebElement placeOrderBtn = wait.until(ExpectedConditions.elementToBeClickable(placeOrder));// Wait for the "Place Order" button to be clickable
-	    placeOrderBtn.click(); // Click the "Place Order" button
+		WebElement placeOrderBtn = wait.until(ExpectedConditions.elementToBeClickable(placeOrder));
+		placeOrderBtn.click(); // Click the "Place Order" button
 
 	}
 
@@ -67,8 +70,14 @@ public class CartPage {
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(successMessage)).isDisplayed();
 	}
 
-//	// **Check if Cart is Empty**
-//	public boolean isCartEmpty() {
-//		return driver.findElements(cartItems).isEmpty();
-//	}
+	// **Get Cart Item Count**
+	public int getCartItemCount() {
+		try {
+			List<WebElement> items = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(cartItems));
+			return items.size();
+		} catch (TimeoutException e) {
+			return 0; // Return 0 if no cart items are found
+		}
+	}
+
 }
