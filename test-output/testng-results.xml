@@ -2,18 +2,18 @@
 <testng-results ignored="0" total="16" passed="16" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-24T16:49:20 IST" name="DemoBlaze Parallel Test Suite" finished-at="2025-03-24T16:51:07 IST" duration-ms="107509">
+  <suite started-at="2025-03-24T17:14:46 IST" name="DemoBlaze Parallel Test Suite" finished-at="2025-03-24T17:16:34 IST" duration-ms="107603">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:MyRunner.signUpRunner@7975d1d8]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:MyRunner.signUpRunner@2d6c53fc]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-03-24T16:49:20 IST" name="Signup Test by Junit" finished-at="2025-03-24T16:49:20 IST" duration-ms="17">
+    <test started-at="2025-03-24T17:14:46 IST" name="Signup Test by Junit" finished-at="2025-03-24T17:14:46 IST" duration-ms="15">
     </test> <!-- Signup Test by Junit -->
-    <test started-at="2025-03-24T16:49:20 IST" name="Signup Test on Chrome" finished-at="2025-03-24T16:49:32 IST" duration-ms="12427">
+    <test started-at="2025-03-24T17:14:46 IST" name="Signup Test on Chrome" finished-at="2025-03-24T17:15:00 IST" duration-ms="13619">
       <class name="MyRunner.signUpRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:MyRunner.signUpRunner@7975d1d8]" started-at="2025-03-24T16:49:20 IST" name="setUpClass" finished-at="2025-03-24T16:49:21 IST" duration-ms="1175" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:MyRunner.signUpRunner@7975d1d8]" started-at="2025-03-24T17:14:46 IST" name="setUpClass" finished-at="2025-03-24T17:14:47 IST" duration-ms="1065" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -24,7 +24,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:MyRunner.signUpRunner@7975d1d8]" started-at="2025-03-24T16:49:21 IST" name="setup" finished-at="2025-03-24T16:49:26 IST" duration-ms="5213" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:MyRunner.signUpRunner@7975d1d8]" started-at="2025-03-24T17:14:47 IST" name="setup" finished-at="2025-03-24T17:14:54 IST" duration-ms="7020" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -35,7 +35,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:MyRunner.signUpRunner@7975d1d8]" started-at="2025-03-24T16:49:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-24T16:49:32 IST" duration-ms="5950" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:MyRunner.signUpRunner@7975d1d8]" started-at="2025-03-24T17:14:55 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-24T17:15:00 IST" duration-ms="5412" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -51,15 +51,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:MyRunner.signUpRunner@7975d1d8]" started-at="2025-03-24T16:49:32 IST" name="tearDownClass" finished-at="2025-03-24T16:49:32 IST" duration-ms="25" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:MyRunner.signUpRunner@7975d1d8]" started-at="2025-03-24T17:15:00 IST" name="tearDownClass" finished-at="2025-03-24T17:15:00 IST" duration-ms="43" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- MyRunner.signUpRunner -->
     </test> <!-- Signup Test on Chrome -->
-    <test started-at="2025-03-24T16:49:32 IST" name="Contact Form Test on Chrome" finished-at="2025-03-24T16:49:41 IST" duration-ms="8438">
+    <test started-at="2025-03-24T17:15:00 IST" name="Contact Form Test on Chrome" finished-at="2025-03-24T17:15:09 IST" duration-ms="8625">
       <class name="TestCases.ContactTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.ContactTest@258d79be]" started-at="2025-03-24T16:49:32 IST" name="setUp" finished-at="2025-03-24T16:49:36 IST" duration-ms="3998" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.ContactTest@258d79be]" started-at="2025-03-24T17:15:00 IST" name="setUp" finished-at="2025-03-24T17:15:04 IST" duration-ms="4269" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -70,7 +70,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testSubmitContactForm(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.ContactTest@258d79be]" started-at="2025-03-24T16:49:36 IST" name="testSubmitContactForm" finished-at="2025-03-24T16:49:40 IST" duration-ms="3917" status="PASS">
+        <test-method signature="testSubmitContactForm(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.ContactTest@258d79be]" started-at="2025-03-24T17:15:04 IST" name="testSubmitContactForm" finished-at="2025-03-24T17:15:08 IST" duration-ms="3925" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -91,19 +91,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSubmitContactForm -->
-        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:TestCases.ContactTest@258d79be]" started-at="2025-03-24T16:49:40 IST" name="tearDownTest" finished-at="2025-03-24T16:49:41 IST" duration-ms="472" status="PASS">
+        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:TestCases.ContactTest@258d79be]" started-at="2025-03-24T17:15:08 IST" name="tearDownTest" finished-at="2025-03-24T17:15:09 IST" duration-ms="401" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.ContactTest@258d79be]" started-at="2025-03-24T16:49:41 IST" name="closeBrowser" finished-at="2025-03-24T16:49:41 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.ContactTest@258d79be]" started-at="2025-03-24T17:15:09 IST" name="closeBrowser" finished-at="2025-03-24T17:15:09 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- TestCases.ContactTest -->
     </test> <!-- Contact Form Test on Chrome -->
-    <test started-at="2025-03-24T16:49:41 IST" name="About Us Test on Chrome" finished-at="2025-03-24T16:49:49 IST" duration-ms="8044">
+    <test started-at="2025-03-24T17:15:09 IST" name="About Us Test on Chrome" finished-at="2025-03-24T17:15:17 IST" duration-ms="8322">
       <class name="TestCases.AboutUsTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.AboutUsTest@4f6f416f]" started-at="2025-03-24T16:49:41 IST" name="setUp" finished-at="2025-03-24T16:49:45 IST" duration-ms="4816" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.AboutUsTest@4f6f416f]" started-at="2025-03-24T17:15:09 IST" name="setUp" finished-at="2025-03-24T17:15:14 IST" duration-ms="5238" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -114,23 +114,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testAboutUsNavigation()[pri:0, instance:TestCases.AboutUsTest@4f6f416f]" started-at="2025-03-24T16:49:45 IST" name="testAboutUsNavigation" finished-at="2025-03-24T16:49:48 IST" duration-ms="2843" status="PASS">
+        <test-method signature="testAboutUsNavigation()[pri:0, instance:TestCases.AboutUsTest@4f6f416f]" started-at="2025-03-24T17:15:14 IST" name="testAboutUsNavigation" finished-at="2025-03-24T17:15:17 IST" duration-ms="2755" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAboutUsNavigation -->
-        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:TestCases.AboutUsTest@4f6f416f]" started-at="2025-03-24T16:49:48 IST" name="tearDownTest" finished-at="2025-03-24T16:49:49 IST" duration-ms="371" status="PASS">
+        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:TestCases.AboutUsTest@4f6f416f]" started-at="2025-03-24T17:15:17 IST" name="tearDownTest" finished-at="2025-03-24T17:15:17 IST" duration-ms="318" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.AboutUsTest@4f6f416f]" started-at="2025-03-24T16:49:49 IST" name="closeBrowser" finished-at="2025-03-24T16:49:49 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.AboutUsTest@4f6f416f]" started-at="2025-03-24T17:15:17 IST" name="closeBrowser" finished-at="2025-03-24T17:15:17 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- TestCases.AboutUsTest -->
     </test> <!-- About Us Test on Chrome -->
-    <test started-at="2025-03-24T16:49:20 IST" name="Login Test on Chrome" finished-at="2025-03-24T16:49:49 IST" duration-ms="29098">
+    <test started-at="2025-03-24T17:14:47 IST" name="Login Test on Chrome" finished-at="2025-03-24T17:15:18 IST" duration-ms="30984">
       <class name="TestCases.LoginTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.LoginTest@352c1b98]" started-at="2025-03-24T16:49:20 IST" name="setUp" finished-at="2025-03-24T16:49:27 IST" duration-ms="7263" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.LoginTest@352c1b98]" started-at="2025-03-24T17:14:47 IST" name="setUp" finished-at="2025-03-24T17:14:53 IST" duration-ms="6586" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -141,15 +141,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testValidLogin()[pri:1, instance:TestCases.LoginTest@352c1b98]" started-at="2025-03-24T16:49:27 IST" name="testValidLogin" finished-at="2025-03-24T16:49:40 IST" duration-ms="12608" status="PASS">
+        <test-method signature="testValidLogin()[pri:1, instance:TestCases.LoginTest@352c1b98]" started-at="2025-03-24T17:14:53 IST" name="testValidLogin" finished-at="2025-03-24T17:15:08 IST" duration-ms="14495" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidLogin -->
-        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:TestCases.LoginTest@352c1b98]" started-at="2025-03-24T16:49:40 IST" name="tearDownTest" finished-at="2025-03-24T16:49:41 IST" duration-ms="707" status="PASS">
+        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:TestCases.LoginTest@352c1b98]" started-at="2025-03-24T17:15:08 IST" name="tearDownTest" finished-at="2025-03-24T17:15:09 IST" duration-ms="932" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.LoginTest@352c1b98]" started-at="2025-03-24T16:49:41 IST" name="setUp" finished-at="2025-03-24T16:49:45 IST" duration-ms="4534" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.LoginTest@352c1b98]" started-at="2025-03-24T17:15:09 IST" name="setUp" finished-at="2025-03-24T17:15:14 IST" duration-ms="4951" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -160,23 +160,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testInvalidLogin()[pri:2, instance:TestCases.LoginTest@352c1b98]" started-at="2025-03-24T16:49:45 IST" name="testInvalidLogin" finished-at="2025-03-24T16:49:49 IST" duration-ms="3497" status="PASS">
+        <test-method signature="testInvalidLogin()[pri:2, instance:TestCases.LoginTest@352c1b98]" started-at="2025-03-24T17:15:14 IST" name="testInvalidLogin" finished-at="2025-03-24T17:15:17 IST" duration-ms="3509" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInvalidLogin -->
-        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:TestCases.LoginTest@352c1b98]" started-at="2025-03-24T16:49:49 IST" name="tearDownTest" finished-at="2025-03-24T16:49:49 IST" duration-ms="373" status="PASS">
+        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:TestCases.LoginTest@352c1b98]" started-at="2025-03-24T17:15:17 IST" name="tearDownTest" finished-at="2025-03-24T17:15:18 IST" duration-ms="434" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.LoginTest@352c1b98]" started-at="2025-03-24T16:49:49 IST" name="closeBrowser" finished-at="2025-03-24T16:49:49 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.LoginTest@352c1b98]" started-at="2025-03-24T17:15:18 IST" name="closeBrowser" finished-at="2025-03-24T17:15:18 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- TestCases.LoginTest -->
     </test> <!-- Login Test on Chrome -->
-    <test started-at="2025-03-24T16:49:49 IST" name="Cart Test on Chrome" finished-at="2025-03-24T16:49:57 IST" duration-ms="7865">
+    <test started-at="2025-03-24T17:15:18 IST" name="Cart Test on Chrome" finished-at="2025-03-24T17:15:26 IST" duration-ms="8084">
       <class name="TestCases.CartTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.CartTest@479ceda0]" started-at="2025-03-24T16:49:49 IST" name="setUp" finished-at="2025-03-24T16:49:54 IST" duration-ms="4677" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.CartTest@479ceda0]" started-at="2025-03-24T17:15:18 IST" name="setUp" finished-at="2025-03-24T17:15:22 IST" duration-ms="4544" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -187,27 +187,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testOpenCart()[pri:1, instance:TestCases.CartTest@479ceda0]" started-at="2025-03-24T16:49:54 IST" name="testOpenCart" finished-at="2025-03-24T16:49:55 IST" duration-ms="1083" status="PASS">
+        <test-method signature="testOpenCart()[pri:1, instance:TestCases.CartTest@479ceda0]" started-at="2025-03-24T17:15:22 IST" name="testOpenCart" finished-at="2025-03-24T17:15:24 IST" duration-ms="1645" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testOpenCart -->
-        <test-method signature="testPlaceOrder()[pri:2, instance:TestCases.CartTest@479ceda0]" started-at="2025-03-24T16:49:55 IST" name="testPlaceOrder" finished-at="2025-03-24T16:49:57 IST" depends-on-methods="TestCases.CartTest.testOpenCart" duration-ms="1695" status="PASS">
+        <test-method signature="testPlaceOrder()[pri:2, instance:TestCases.CartTest@479ceda0]" started-at="2025-03-24T17:15:24 IST" name="testPlaceOrder" finished-at="2025-03-24T17:15:25 IST" depends-on-methods="TestCases.CartTest.testOpenCart" duration-ms="1572" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPlaceOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.CartTest@479ceda0]" started-at="2025-03-24T16:49:57 IST" name="tearDown" finished-at="2025-03-24T16:49:57 IST" duration-ms="380" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.CartTest@479ceda0]" started-at="2025-03-24T17:15:25 IST" name="tearDown" finished-at="2025-03-24T17:15:26 IST" duration-ms="275" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.CartTest@479ceda0]" started-at="2025-03-24T16:49:57 IST" name="closeBrowser" finished-at="2025-03-24T16:49:57 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.CartTest@479ceda0]" started-at="2025-03-24T17:15:26 IST" name="closeBrowser" finished-at="2025-03-24T17:15:26 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- TestCases.CartTest -->
     </test> <!-- Cart Test on Chrome -->
-    <test started-at="2025-03-24T16:49:57 IST" name="Signup Test on Firefox" finished-at="2025-03-24T16:50:13 IST" duration-ms="15700">
+    <test started-at="2025-03-24T17:15:26 IST" name="Signup Test on Firefox" finished-at="2025-03-24T17:15:41 IST" duration-ms="15569">
       <class name="MyRunner.signUpRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:MyRunner.signUpRunner@2d6c53fc]" started-at="2025-03-24T16:49:57 IST" name="setUpClass" finished-at="2025-03-24T16:49:57 IST" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:MyRunner.signUpRunner@2d6c53fc]" started-at="2025-03-24T17:15:26 IST" name="setUpClass" finished-at="2025-03-24T17:15:26 IST" duration-ms="25" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -218,7 +218,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:MyRunner.signUpRunner@2d6c53fc]" started-at="2025-03-24T16:49:57 IST" name="setup" finished-at="2025-03-24T16:50:07 IST" duration-ms="10440" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:MyRunner.signUpRunner@2d6c53fc]" started-at="2025-03-24T17:15:26 IST" name="setup" finished-at="2025-03-24T17:15:36 IST" duration-ms="10221" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -229,7 +229,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:MyRunner.signUpRunner@2d6c53fc]" started-at="2025-03-24T16:50:07 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-24T16:50:13 IST" duration-ms="5203" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:MyRunner.signUpRunner@2d6c53fc]" started-at="2025-03-24T17:15:36 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-24T17:15:41 IST" duration-ms="5295" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -245,15 +245,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:MyRunner.signUpRunner@2d6c53fc]" started-at="2025-03-24T16:50:13 IST" name="tearDownClass" finished-at="2025-03-24T16:50:13 IST" duration-ms="17" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:MyRunner.signUpRunner@2d6c53fc]" started-at="2025-03-24T17:15:41 IST" name="tearDownClass" finished-at="2025-03-24T17:15:41 IST" duration-ms="21" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- MyRunner.signUpRunner -->
     </test> <!-- Signup Test on Firefox -->
-    <test started-at="2025-03-24T16:49:49 IST" name="Category Test on Chrome" finished-at="2025-03-24T16:50:13 IST" duration-ms="24115">
+    <test started-at="2025-03-24T17:15:17 IST" name="Category Test on Chrome" finished-at="2025-03-24T17:15:42 IST" duration-ms="25035">
       <class name="TestCases.CategoryTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.CategoryTest@44c73c26]" started-at="2025-03-24T16:49:49 IST" name="setUp" finished-at="2025-03-24T16:49:52 IST" duration-ms="3839" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.CategoryTest@44c73c26]" started-at="2025-03-24T17:15:17 IST" name="setUp" finished-at="2025-03-24T17:15:21 IST" duration-ms="4421" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -264,23 +264,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testAddingProductsFromDifferentCategories()[pri:1, instance:TestCases.CategoryTest@44c73c26]" started-at="2025-03-24T16:49:52 IST" name="testAddingProductsFromDifferentCategories" finished-at="2025-03-24T16:50:11 IST" duration-ms="18913" status="PASS">
+        <test-method signature="testAddingProductsFromDifferentCategories()[pri:1, instance:TestCases.CategoryTest@44c73c26]" started-at="2025-03-24T17:15:21 IST" name="testAddingProductsFromDifferentCategories" finished-at="2025-03-24T17:15:41 IST" duration-ms="20007" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddingProductsFromDifferentCategories -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.CategoryTest@44c73c26]" started-at="2025-03-24T16:50:11 IST" name="tearDown" finished-at="2025-03-24T16:50:13 IST" duration-ms="1321" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.CategoryTest@44c73c26]" started-at="2025-03-24T17:15:41 IST" name="tearDown" finished-at="2025-03-24T17:15:42 IST" duration-ms="600" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.CategoryTest@44c73c26]" started-at="2025-03-24T16:50:13 IST" name="closeBrowser" finished-at="2025-03-24T16:50:13 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.CategoryTest@44c73c26]" started-at="2025-03-24T17:15:42 IST" name="closeBrowser" finished-at="2025-03-24T17:15:42 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- TestCases.CategoryTest -->
     </test> <!-- Category Test on Chrome -->
-    <test started-at="2025-03-24T16:50:13 IST" name="Contact Form Test on Firefox" finished-at="2025-03-24T16:50:27 IST" duration-ms="14573">
+    <test started-at="2025-03-24T17:15:42 IST" name="Contact Form Test on Firefox" finished-at="2025-03-24T17:15:57 IST" duration-ms="14906">
       <class name="TestCases.ContactTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.ContactTest@59e32960]" started-at="2025-03-24T16:50:13 IST" name="setUp" finished-at="2025-03-24T16:50:22 IST" duration-ms="9081" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.ContactTest@59e32960]" started-at="2025-03-24T17:15:42 IST" name="setUp" finished-at="2025-03-24T17:15:52 IST" duration-ms="9493" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -291,7 +291,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testSubmitContactForm(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.ContactTest@59e32960]" started-at="2025-03-24T16:50:22 IST" name="testSubmitContactForm" finished-at="2025-03-24T16:50:26 IST" duration-ms="3841" status="PASS">
+        <test-method signature="testSubmitContactForm(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.ContactTest@59e32960]" started-at="2025-03-24T17:15:52 IST" name="testSubmitContactForm" finished-at="2025-03-24T17:15:55 IST" duration-ms="3397" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -312,19 +312,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSubmitContactForm -->
-        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:TestCases.ContactTest@59e32960]" started-at="2025-03-24T16:50:26 IST" name="tearDownTest" finished-at="2025-03-24T16:50:27 IST" duration-ms="1639" status="PASS">
+        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:TestCases.ContactTest@59e32960]" started-at="2025-03-24T17:15:55 IST" name="tearDownTest" finished-at="2025-03-24T17:15:57 IST" duration-ms="2007" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.ContactTest@59e32960]" started-at="2025-03-24T16:50:27 IST" name="closeBrowser" finished-at="2025-03-24T16:50:27 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.ContactTest@59e32960]" started-at="2025-03-24T17:15:57 IST" name="closeBrowser" finished-at="2025-03-24T17:15:57 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- TestCases.ContactTest -->
     </test> <!-- Contact Form Test on Firefox -->
-    <test started-at="2025-03-24T16:50:27 IST" name="About Us Test on Firefox" finished-at="2025-03-24T16:50:37 IST" duration-ms="9528">
+    <test started-at="2025-03-24T17:15:57 IST" name="About Us Test on Firefox" finished-at="2025-03-24T17:16:08 IST" duration-ms="11142">
       <class name="TestCases.AboutUsTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.AboutUsTest@56c4278e]" started-at="2025-03-24T16:50:27 IST" name="setUp" finished-at="2025-03-24T16:50:33 IST" duration-ms="5818" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.AboutUsTest@56c4278e]" started-at="2025-03-24T17:15:57 IST" name="setUp" finished-at="2025-03-24T17:16:03 IST" duration-ms="6154" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -335,23 +335,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testAboutUsNavigation()[pri:0, instance:TestCases.AboutUsTest@56c4278e]" started-at="2025-03-24T16:50:33 IST" name="testAboutUsNavigation" finished-at="2025-03-24T16:50:36 IST" duration-ms="2435" status="PASS">
+        <test-method signature="testAboutUsNavigation()[pri:0, instance:TestCases.AboutUsTest@56c4278e]" started-at="2025-03-24T17:16:03 IST" name="testAboutUsNavigation" finished-at="2025-03-24T17:16:06 IST" duration-ms="2595" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAboutUsNavigation -->
-        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:TestCases.AboutUsTest@56c4278e]" started-at="2025-03-24T16:50:36 IST" name="tearDownTest" finished-at="2025-03-24T16:50:37 IST" duration-ms="1261" status="PASS">
+        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:TestCases.AboutUsTest@56c4278e]" started-at="2025-03-24T17:16:06 IST" name="tearDownTest" finished-at="2025-03-24T17:16:08 IST" duration-ms="2382" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.AboutUsTest@56c4278e]" started-at="2025-03-24T16:50:37 IST" name="closeBrowser" finished-at="2025-03-24T16:50:37 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.AboutUsTest@56c4278e]" started-at="2025-03-24T17:16:08 IST" name="closeBrowser" finished-at="2025-03-24T17:16:08 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- TestCases.AboutUsTest -->
     </test> <!-- About Us Test on Firefox -->
-    <test started-at="2025-03-24T16:50:13 IST" name="Login Test on Firefox" finished-at="2025-03-24T16:50:52 IST" duration-ms="39324">
+    <test started-at="2025-03-24T17:15:41 IST" name="Login Test on Firefox" finished-at="2025-03-24T17:16:17 IST" duration-ms="35232">
       <class name="TestCases.LoginTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.LoginTest@3148f668]" started-at="2025-03-24T16:50:13 IST" name="setUp" finished-at="2025-03-24T16:50:24 IST" duration-ms="11543" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.LoginTest@3148f668]" started-at="2025-03-24T17:15:41 IST" name="setUp" finished-at="2025-03-24T17:15:50 IST" duration-ms="9088" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -362,15 +362,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testValidLogin()[pri:1, instance:TestCases.LoginTest@3148f668]" started-at="2025-03-24T16:50:24 IST" name="testValidLogin" finished-at="2025-03-24T16:50:36 IST" duration-ms="11466" status="PASS">
+        <test-method signature="testValidLogin()[pri:1, instance:TestCases.LoginTest@3148f668]" started-at="2025-03-24T17:15:50 IST" name="testValidLogin" finished-at="2025-03-24T17:16:04 IST" duration-ms="13233" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidLogin -->
-        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:TestCases.LoginTest@3148f668]" started-at="2025-03-24T16:50:36 IST" name="tearDownTest" finished-at="2025-03-24T16:50:37 IST" duration-ms="1266" status="PASS">
+        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:TestCases.LoginTest@3148f668]" started-at="2025-03-24T17:16:04 IST" name="tearDownTest" finished-at="2025-03-24T17:16:05 IST" duration-ms="1482" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.LoginTest@3148f668]" started-at="2025-03-24T16:50:37 IST" name="setUp" finished-at="2025-03-24T16:50:46 IST" duration-ms="9189" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.LoginTest@3148f668]" started-at="2025-03-24T17:16:05 IST" name="setUp" finished-at="2025-03-24T17:16:12 IST" duration-ms="6756" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -381,23 +381,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testInvalidLogin()[pri:2, instance:TestCases.LoginTest@3148f668]" started-at="2025-03-24T16:50:46 IST" name="testInvalidLogin" finished-at="2025-03-24T16:50:51 IST" duration-ms="4463" status="PASS">
+        <test-method signature="testInvalidLogin()[pri:2, instance:TestCases.LoginTest@3148f668]" started-at="2025-03-24T17:16:12 IST" name="testInvalidLogin" finished-at="2025-03-24T17:16:14 IST" duration-ms="1657" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInvalidLogin -->
-        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:TestCases.LoginTest@3148f668]" started-at="2025-03-24T16:50:51 IST" name="tearDownTest" finished-at="2025-03-24T16:50:52 IST" duration-ms="1380" status="PASS">
+        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:TestCases.LoginTest@3148f668]" started-at="2025-03-24T17:16:14 IST" name="tearDownTest" finished-at="2025-03-24T17:16:17 IST" duration-ms="2984" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.LoginTest@3148f668]" started-at="2025-03-24T16:50:52 IST" name="closeBrowser" finished-at="2025-03-24T16:50:52 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.LoginTest@3148f668]" started-at="2025-03-24T17:16:17 IST" name="closeBrowser" finished-at="2025-03-24T17:16:17 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- TestCases.LoginTest -->
     </test> <!-- Login Test on Firefox -->
-    <test started-at="2025-03-24T16:50:52 IST" name="Cart Test on Firefox" finished-at="2025-03-24T16:51:02 IST" duration-ms="10272">
+    <test started-at="2025-03-24T17:16:17 IST" name="Cart Test on Firefox" finished-at="2025-03-24T17:16:29 IST" duration-ms="12575">
       <class name="TestCases.CartTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.CartTest@768fc0f2]" started-at="2025-03-24T16:50:52 IST" name="setUp" finished-at="2025-03-24T16:50:58 IST" duration-ms="6475" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.CartTest@768fc0f2]" started-at="2025-03-24T17:16:17 IST" name="setUp" finished-at="2025-03-24T17:16:25 IST" duration-ms="8823" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -408,27 +408,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testOpenCart()[pri:1, instance:TestCases.CartTest@768fc0f2]" started-at="2025-03-24T16:50:58 IST" name="testOpenCart" finished-at="2025-03-24T16:51:00 IST" duration-ms="1159" status="PASS">
+        <test-method signature="testOpenCart()[pri:1, instance:TestCases.CartTest@768fc0f2]" started-at="2025-03-24T17:16:25 IST" name="testOpenCart" finished-at="2025-03-24T17:16:27 IST" duration-ms="1171" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testOpenCart -->
-        <test-method signature="testPlaceOrder()[pri:2, instance:TestCases.CartTest@768fc0f2]" started-at="2025-03-24T16:51:00 IST" name="testPlaceOrder" finished-at="2025-03-24T16:51:01 IST" depends-on-methods="TestCases.CartTest.testOpenCart" duration-ms="1345" status="PASS">
+        <test-method signature="testPlaceOrder()[pri:2, instance:TestCases.CartTest@768fc0f2]" started-at="2025-03-24T17:16:27 IST" name="testPlaceOrder" finished-at="2025-03-24T17:16:28 IST" depends-on-methods="TestCases.CartTest.testOpenCart" duration-ms="1278" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPlaceOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.CartTest@768fc0f2]" started-at="2025-03-24T16:51:01 IST" name="tearDown" finished-at="2025-03-24T16:51:02 IST" duration-ms="1270" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.CartTest@768fc0f2]" started-at="2025-03-24T17:16:28 IST" name="tearDown" finished-at="2025-03-24T17:16:29 IST" duration-ms="1286" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.CartTest@768fc0f2]" started-at="2025-03-24T16:51:02 IST" name="closeBrowser" finished-at="2025-03-24T16:51:02 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.CartTest@768fc0f2]" started-at="2025-03-24T17:16:29 IST" name="closeBrowser" finished-at="2025-03-24T17:16:29 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- TestCases.CartTest -->
     </test> <!-- Cart Test on Firefox -->
-    <test started-at="2025-03-24T16:50:37 IST" name="Category Test on Firefox" finished-at="2025-03-24T16:51:07 IST" duration-ms="30280">
+    <test started-at="2025-03-24T17:16:08 IST" name="Category Test on Firefox" finished-at="2025-03-24T17:16:34 IST" duration-ms="25887">
       <class name="TestCases.CategoryTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.CategoryTest@59cba5a]" started-at="2025-03-24T16:50:37 IST" name="setUp" finished-at="2025-03-24T16:50:49 IST" duration-ms="12577" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestCases.CategoryTest@59cba5a]" started-at="2025-03-24T17:16:08 IST" name="setUp" finished-at="2025-03-24T17:16:18 IST" duration-ms="9456" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -439,15 +439,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testAddingProductsFromDifferentCategories()[pri:1, instance:TestCases.CategoryTest@59cba5a]" started-at="2025-03-24T16:50:49 IST" name="testAddingProductsFromDifferentCategories" finished-at="2025-03-24T16:51:06 IST" duration-ms="16694" status="PASS">
+        <test-method signature="testAddingProductsFromDifferentCategories()[pri:1, instance:TestCases.CategoryTest@59cba5a]" started-at="2025-03-24T17:16:18 IST" name="testAddingProductsFromDifferentCategories" finished-at="2025-03-24T17:16:33 IST" duration-ms="15424" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddingProductsFromDifferentCategories -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.CategoryTest@59cba5a]" started-at="2025-03-24T16:51:06 IST" name="tearDown" finished-at="2025-03-24T16:51:07 IST" duration-ms="999" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.CategoryTest@59cba5a]" started-at="2025-03-24T17:16:33 IST" name="tearDown" finished-at="2025-03-24T17:16:34 IST" duration-ms="997" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.CategoryTest@59cba5a]" started-at="2025-03-24T16:51:07 IST" name="closeBrowser" finished-at="2025-03-24T16:51:07 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestCases.CategoryTest@59cba5a]" started-at="2025-03-24T17:16:34 IST" name="closeBrowser" finished-at="2025-03-24T17:16:34 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

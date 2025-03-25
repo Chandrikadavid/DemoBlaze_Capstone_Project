@@ -18,18 +18,19 @@ public class CartPage {
 
 	// **Locators using Page Object Model**
 
-	private By cartButton = By.xpath("//a[@class='nav-link' and contains(text(),'Cart')]");
-	private By placeOrder = By.xpath("//button[contains(text(),'Place Order')]");
-	private By nameField = By.id("name");
-	private By countryField = By.id("country");
-	private By cityField = By.id("city");
-	private By cardField = By.id("card");
-	private By monthField = By.id("month");
-	private By yearField = By.id("year");
-	private By purchaseButton = By.xpath("//button[contains(text(),'Purchase')]");
-	private By successMessage = By.xpath("//h2[contains(text(),'Thank you for your purchase!')]");
-	private By cartItems = By.xpath("//tbody/tr"); // Cart item rows
-	private By deleteButtons = By.xpath("//tbody/tr/td[4]/a"); // Delete button for each cart item
+	By cartButton = By.xpath("//a[@class='nav-link' and contains(text(),'Cart')]");
+	By placeOrder = By.xpath("//button[contains(text(),'Place Order')]");
+	By nameField = By.id("name");
+	By countryField = By.id("country");
+	By cityField = By.id("city");
+	By cardField = By.id("card");
+	By monthField = By.id("month");
+	By yearField = By.id("year");
+	By purchaseButton = By.xpath("//button[contains(text(),'Purchase')]");
+	By successMessage = By.xpath("//h2[contains(text(),'Thank you for your purchase!')]");
+	By cartItems = By.xpath("//tbody/tr"); // Cart item rows
+	// By deleteButtons = By.xpath("//tbody/tr/td[4]/a"); // Delete button for each
+	// cart item
 
 	public CartPage(WebDriver driver, Properties prop) {
 		this.driver = driver; // Assigns the WebDriver instance to the class variable 'driver'
